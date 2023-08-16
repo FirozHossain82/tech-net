@@ -6,8 +6,8 @@ function App() {
 
   return (
     <div>
-      <h1>This is Tech Net Projects</h1>
-      <button className="border-2 border-green-400">Details</button>
+      <h1 className='bg-lime-200'>This is Tech Net Projects</h1>
+
     </div>
   )
 }
