@@ -2,6 +2,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import './App.css'
 import { RootState } from './redux/store'
+import { decrement, increment } from './redux/features/counter/counterSlice';
 
 function App() {
  
@@ -12,11 +13,13 @@ function App() {
     <div>
       <h1 className='bg-lime-200 text-center text-2xl font-bold py-4'>This is Tech Net Projects</h1>
       <div className='flex gap-6 justify-center my-8'>
-          <button className='border-2 border-green-500 rounded-md px-2 py-3'>
+          <button onClick={() => dispatch(increment())} className='border-2 border-green-500 rounded-md px-2 py-3'>
             Increment
           </button>
           <div>{count}</div>
-          <button className='border-2 border-red-500 rounded-md px-2 py-3'>Decrement</button>
+          <button onClick={() => dispatch(decrement())} className='border-2 border-red-500 rounded-md px-2 py-3'>
+            Decrement
+            </button>
       </div>
     </div>
   )
